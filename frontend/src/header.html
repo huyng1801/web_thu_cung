@@ -1,0 +1,46 @@
+<div class="container-fluid text-light bg-primary">
+    <div class="container py-2">
+        <div class="row">
+            <div class="col-md-3 d-flex flex-column align-items-center justify-content-center">
+                <!-- Logo -->
+                <img src="assets/images/z5254706092177_cff8af9137e127114cfbc74aca72db90.jpg" alt="Logo" class="logo" width="150">
+            </div>
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <!-- Search bar -->
+                <form id="searchForm" class="w-100">
+                    <div class="form-row">
+                        <div class="col input-group">
+                            <input type="text" class="form-control" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+                            <div class="input-group-append" id="btn-search">
+                                <span class="input-group-text"><i class="fas fa-search"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-3 text-right d-flex align-items-center justify-content-center">
+                <!-- Đăng ký và Đăng nhập -->
+                <div class="mr-3 text-primary" id="loginContainer">
+                    <span id="customerName" class="d-flex flex-column align-items-center mr-1 header-link">
+                        <p class="text-center"><i class="far fa-user-circle fa-2x mr-1"></i></p>
+                        <span>Đăng ký / Đăng nhập</span>
+                    </span>
+                    <!-- Submenu -->
+                    <div id="customerSubMenu" class="submenu" style="display: none; position: absolute; background-color: #fff; min-width: 150px; z-index: 1;">
+                        <ul style="list-style-type: none; padding: 0;">
+                            <li><a href="#" id="logoutLink">Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Giỏ hàng -->
+                <div class="text-primary position-relative">
+                    <a href="cart.html" class="d-flex flex-column align-items-center mr-1 header-link">
+                        <p class="text-center"><i class="fas fa-shopping-cart fa-2x mr-1"></i></p>
+                        <span>Giỏ hàng</span>
+                        <span id="cartItemCount" class="badge badge-danger position-absolute" style="top: -6px; right: 8px; border-radius: 50%;">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

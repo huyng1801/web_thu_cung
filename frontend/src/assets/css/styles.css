@@ -1,0 +1,26 @@
+
+h1 {
+    color: #007bff;
+}
+.header-link {
+    color: #eee;  
+}
+.header-link:hover {
+    color: #ddd;
+} 
+.btn-view-details, .btn-add-to-cart{
+    font-size: 0.8rem;
+    padding: 5px;
+}
+.nav-item {
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: #eee; /* Màu nền cho footer */
+    color: #333; /* Màu chữ cho footer */
+    padding: 20px 0; /* Khoảng cách giữa nội dung và viền của footer */
+    width: 100%; /* Chiều rộng của footer */
+    margin-top: 20px;
+    text-align: center; /* Căn giữa nội dung trong footer */
+}

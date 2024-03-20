@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đơn đặt hàng</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Thanh điều hướng bên -->
+      <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar">
+    
+      </nav>
+      <!-- Nội dung chính -->
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="text-center text-uppercase">đơn đặt hàng</h1>
+        </div>
+        <div class="container-fluid mt-5">
+   
+          <table class="table mt-3">
+            <thead>
+              <tr>
+                <th>Mã đơn hàng</th>
+                <th>Tổng giá</th>
+                <th>Ghi chú</th>
+                <th>Trạng thái</th>
+             
+                <th>Tên khách hàng</th>
+                <th>Email</th>
+                <th>Địa chỉ</th>
+                <th>Số điện thoại</th>
+                <th>Hành động</th>
+              </tr>
+            </thead>
+            <tbody id="orderTableBody">
+              <!-- Dữ liệu đơn hàng sẽ được thêm động ở đây -->
+            </tbody>
+            
+          </table>
+        </div>
+      </main>
+    </div>
+  </div>
+<!-- Detail Order Modal -->
+<div class="modal fade" id="detailOrderModal" tabindex="-1" role="dialog" aria-labelledby="detailOrderModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="detailOrderModalLabel">Chi tiết Đơn hàng</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Chi tiết đơn hàng sẽ được hiển thị ở đây -->
+        <div id="orderDetailsContainer"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+  <!-- JavaScript của Bootstrap và các phụ thuộc -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- JavaScript của Đơn đặt hàng -->
+  <script src="assets/js/order.js"></script>
+  <!-- Script để load sidebar và footer -->
+  <script>
+    // Load sidebar
+    fetch('sidebar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar').innerHTML = data;
+      })
+      .catch(error => console.error('Lỗi khi tải thanh điều hướng bên:', error));
+
+    // Load footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      })
+      .catch(error => console.error('Lỗi khi tải chân trang:', error));
+  </script>
+</body>
+
+</html>
